@@ -1,3 +1,48 @@
+:root {
+  /* design tokens */
+  --spacing-1: 8px;
+  --spacing-2: 16px;
+  --spacing-3: 24px;
+  --spacing-4: 32px;
+  --spacing-5: 48px;
+  --spacing-6: 64px;
+  --spacing-7: 96px;
+  --spacing-8: 128px;
+
+  --font-size-small: 1rem;
+  --font-size-medium: 1.25rem;
+  --font-size-big: 1.5rem;
+  --font-size-very_big: 2rem;
+
+  --color-primary: hsl(160deg, 100%, 30%);
+  --color-secondary-light: hsl(45deg, 100%, 50%);
+  --color-secondary-dark: hsl(45deg, 100%, 40%);
+  --color-grays-black: hsl(0deg, 0%, 0%);
+  --color-grays-very_dark: hsl(0deg, 0%, 10%);
+  --color-grays-dark: hsl(0deg, 0%, 30%);
+  --color-grays-medium: hsl(0deg, 0%, 40%);
+  --color-grays-light: hsl(0deg, 0%, 60%);
+  --color-grays-white: hsl(0deg, 0%, 100%);
+}
+
+html,
+body,
+div,
+span,
+h1,
+h2,
+p,
+em,
+strong,
+main,
+header,
+section {
+  /* some defaults reset */
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
 * {
   box-sizing: border-box;
   font-family: "Lato", sans-serif;
@@ -5,8 +50,67 @@
 
 html,
 body {
-  margin: 0;
-  padding: 0;
+  height: 100%;
 }
 
-/* Add styles here! */
+header {
+  min-height: 45%;
+  background-color: var(--color-grays-white);
+  border-bottom: solid 4px var(--color-grays-medium);
+}
+
+.intro-chunk {
+  max-width: 300px;
+  padding-block-start: var(--spacing-7);
+  padding-inline-start: var(--spacing-3);
+}
+
+.intro-chunk .title {
+  padding-block-end: var(--spacing-2);
+  font-size: var(--font-size-very_big);
+}
+
+.intro-chunk p {
+  margin-block-start: var(--spacing-2);
+  margin-block-end: var(--spacing-2);
+  font-size: var(--font-size-small);
+  line-height: var(--font-size-big);
+}
+
+.intro-chunk strong {
+  color: var(--color-primary);
+}
+
+main {
+  height: 55%;
+  padding-block-start: var(--spacing-6);
+  background-color: var(--color-grays-light);
+}
+
+.max-width-wrapper {
+  max-width: 550px;
+  height: 100%;
+  margin: 0 auto;
+}
+
+.card {
+  padding: var(--spacing-1) var(--spacing-3);
+  background-color: var(--color-grays-white);
+  border-bottom: solid 4px var(--color-grays-medium);
+}
+
+.card .indented-heading {
+  width: fit-content;
+  margin-inline-start: calc(-1 * var(--spacing-4));
+  padding: var(--spacing-2) var(--spacing-4);
+  background-color: var(--color-secondary-light);
+  border-bottom: solid 4px var(--color-secondary-dark);
+  font-size: var(--font-size-medium);
+}
+
+.card p {
+  margin-block-start: var(--spacing-2);
+  margin-block-end: var(--spacing-2);
+  font-size: var(--font-size-small);
+  line-height: var(--font-size-medium);
+}
