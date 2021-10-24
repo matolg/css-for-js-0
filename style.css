@@ -62,7 +62,6 @@ header {
 .intro-chunk {
   max-width: 300px;
   padding-block-start: var(--spacing-7);
-  padding-inline-start: var(--spacing-3);
 }
 
 .intro-chunk .title {
@@ -95,6 +94,7 @@ main {
 
 .card {
   padding: var(--spacing-1) var(--spacing-3);
+  margin: calc(-1 * var(--spacing-1)) calc(-1 * var(--spacing-3));
   background-color: var(--color-grays-white);
   border-bottom: solid 4px var(--color-grays-medium);
 }
