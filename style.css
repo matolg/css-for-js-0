@@ -87,9 +87,10 @@ main {
 }
 
 .max-width-wrapper {
-  max-width: 550px;
+  max-width: 700px;
   height: 100%;
   margin: 0 auto;
+  padding: var(--spacing-3);
 }
 
 .card {
